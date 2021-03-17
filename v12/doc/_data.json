@@ -1,0 +1,156 @@
+{
+    "version":"0.1",
+    "pageContent":{
+      "_comments":"JSON object that contains data for page labels, buttons, etc.",
+      "navItems":{
+        "_common":{
+          "buttonBackToGallery":{
+            "name":"Back To Gallery",
+            "method":"backToGallery()",
+            "idName":"backToGallery"
+          },
+          "buttonStartTutorial":{
+            "name":"Start Tutorial",
+            "method":"startTutorialFromDetailsScreen()",
+            "idName":"startTutorial"
+          },
+          "buttonViewDetails":{
+            "name":"View Details",
+            "method":"viewDetails()",
+            "idName":"stepsViewDetails"
+          }
+        }
+      }
+    },
+	"tutorial":{
+      "_common":{
+        "name":"JSON - Using a Mapping node to create a JSON Object message",
+        "shortDescription":"Learn how to use a Mapping node to create a new JSON Object message in a message flow driven by an XML message over HTTP.",
+        "durationText":"This tutorial takes approximately",
+        "durationTime":"5 minutes",
+        "_resourceToOpenComment":"The ID of the first resource to open when the user imports the tutorial. Resource IDs are defined in the repo_metadata.json Tutorials listing on ot4i.",
+        "resourceToOpen":"Example_JSONObject_Mapping",
+        "helpLink":{
+          "text":"IBM Knowledge Center",
+          "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.ace.home.doc/help_home.htm"
+        }
+      },
+      "pageDetails":{
+        "topicsName":"Tutorial Topics",
+        "_topicListComment":"A short list of product concepts or tasks demonstrated by this tutorial",
+        "topicList":[
+          {
+            "title":"Mapping node"
+          },
+          {
+            "title":"JSON writing"
+          }
+        ],
+        "outcomesName":"Learning outcomes",
+        "_outcomesComment":"Start learning some product basics with a very simple Toolkit use case",
+        "outcomeList":[
+          {
+            "title":"Use App Connect Enterprise to create and drive a message flow which transforms XML to JSON data using a Mapping."
+          }
+        ],
+        "summary":{
+          "overviewName":"OVERVIEW",
+          "_overviewComment":"A short description of what happens in this tutorial, and an optional short explanation of the IIB concepts used in this tutorial if necessary for context. What background knowledge must the user have for this to make sense?",
+          "sections":[
+            {
+              "section":"This tutorial demonstrates a simple message flow which receives XML data over HTTP. The flow transforms the input XML structure into a JSON Object output structure using a Mapping node (whose behaviour is based on a graphical map), and sends this back to the HTTP request."
+            },
+            {
+              "section":"In App Connect Enterprise, message flows can be used to transform input data structures into output data structures, or create entirely new data structures from scratch. Several transformation options are provided including a Compute node (which uses ESQL), a Mapping node (which uses a graphical user interface) and a JavaCompute node (which uses Java). This tutorial focusses on creating a JSON Object payload from scratch. Other tutorials similar to this one focus on a JSON Array payload and other transformation mechanisms."
+            }
+          ]
+        }
+      },
+      "pageSteps":{
+        "create":{
+          "overview":{
+            "name":"Create",
+            "heading":"Import project",
+            "_createComment":"A description of what will happen when the user clicks Import.",
+            "sections":[
+              {
+                "section":"Click <span class='uicontrol'>Import</span> and the <span class='uicontrol'>Example_JSONObject_Mapping</span> application will be imported into your workspace."
+              },
+              {
+                "section":"The <span class='uicontrol'>Example_JSONObject_Mapping</span> message flow will be opened for you."
+              }
+            ]
+          },
+          "helpLinks":{
+            "title":"Find out more",
+            "details":[
+              {
+                "title":"Knowledge Center link to ",
+                "description":"Developing integration solutions from scratch",
+                "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bi12002_.htm",
+                "type":"web"
+              }
+            ]
+          },
+          "actions":{
+            "title":"Create Actions",
+            "details":[
+              {
+                "name":"Import",
+                "method":"importArtifacts()"
+              }
+            ]
+          }
+        },
+        "prepare":{
+          "overview":{
+            "name":"Prepare",
+            "heading":"Prepare an Integration Server to test the message flow",
+            "_prepareComment":"Creating an IntegrationServer:",
+            "sections":[
+              {
+                "section":"<b>Create an Integration Server</b>",
+                "steps":{
+                  "type":"ordered",
+                  "details":[
+                    {
+                      "details":"Next you will test the message flow using a local integration server, which is created from within the Toolkit. If you're using a Toolkit earlier than version 11.0.0.7, then you will need to open an App Connect Enterprise Command Console and start an integration server that way. This alternate option is detailed in the <a href='https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bn03995_.html'>Knowledge Center</a>, but we will progress in this tutorial assuming you're using our most up to date Toolkit capabilities."
+                    },
+                    {
+                      "details":"From the Integration Explorer view in the bottom left corner of the Toolkit, right-click the Integration Servers folder and select the option to <span class='uicontrol'>Create a local integration server</span>. Leave all the options with their default values and click Finish. The local Integration Server will be started, using a project in your Toolkit's workspace as the work directory. Click OK to dismiss the Success dialog."
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "run":{
+          "overview":{
+            "name":"Run",
+            "heading":"Test the message flow using the local Integration Server",
+            "_runComment":"The full steps for the user to run through the tutorial. Use 'sections' to render paragraphs, 'steps' with a type of 'ordered' or 'unordered' to render HTML lists, and 'substeps' to render nested lists.",
+            "sections":[
+              {
+                "section":"<b>Testing using the Flow Exerciser</b>",
+                "steps":{
+                  "type":"ordered",
+                  "details":[
+                    {
+                      "details":"The imported message flow <span class='application'>Example_JSONObject_Mapping</span> should still be open. At the top of the flow canvas, click the Flow Exerciser icon <img src='https://ot4i.github.io/iib-tutorials/images/icons/iib/startFlowExerciser.png' alt='' />. If prompted (which you will be if your Toolkit has known connections to more than one server), select the <span class='application'>TEST_SERVER</span> integration server that you just created and agree to the confirmation dialog which warns that the message flow is owned by an Application. After a few seconds another confirmation dialog will appear with a Ready to record message status. Read through the information on the dialog and click Close."
+                    },
+                    {
+                      "details":"Back at the top of the flow, click on the Send Message icon <img src='https://ot4i.github.io/iib-tutorials/images/icons/iib/sendMessage.png' alt='' /> and when the dialog opens, select the provided input message:<br><code>&lt;Message&gt;&lt;Country&gt;&lt;Name&gt;UK&lt;/Name&gt;&lt;Greeting&gt;Hello&lt;/Greeting&gt;&lt;/Country&gt;&lt;/Message&gt;</code><br>Click Send to push the data into the flow."
+                    },
+                    {
+                      "details":"You should receive a reply message from the flow. The XML will have been transformed into a JSON Object messag :<br><code>{\"Message\":{\"Country\":{\"Name\":\"UK\",\"Greeting\":\"Hello\"}}}</code>"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      }
+    }		
+  }
