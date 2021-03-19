@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<MessagePool xmlns="http://wwww.ibm.com/iib/test/1.0.0">
-    <InputMessage timestamp="1615673141469" nodeId="FCMComposite_1_1" name="InputMessage" id="1615673141469-170">
-        <plainText>%3CMessage%3E%3CCountry%3E%3CName%3EUK%3C%2FName%3E%3CGreeting%3EHello%3C%2FGreeting%3E%3C%2FCountry%3E%3C%2FMessage%3E</plainText>
-    </InputMessage>
-</MessagePool>
