@@ -31,8 +31,8 @@
         "_resourceToOpenComment":"The ID of the first resource to open when the user imports the tutorial. Resource IDs are defined in the repo_metadata.json Tutorials listing on ot4i.",
         "resourceToOpen":"Example_JSONObject_Mapping",
         "helpLink":{
-          "text":"IBM Knowledge Center",
-          "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.ace.home.doc/help_home.htm"
+                "text": "IBM Documentation",
+           		"link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/acesw_home.html"
         }
       },
       "pageDetails":{
@@ -85,10 +85,10 @@
             "title":"Find out more",
             "details":[
               {
-                "title":"Knowledge Center link to ",
-                "description":"Developing integration solutions from scratch",
-                "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bi12002_.htm",
-                "type":"web"
+						"title": "IBM Documentation link to ",
+						"description": "Developing integration solutions from scratch",
+						"link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/bi12002_.htm",
+						"type": "web"
               }
             ]
           },
@@ -114,7 +114,7 @@
                   "type":"ordered",
                   "details":[
                     {
-                      "details":"Next you will test the message flow using a local integration server, which is created from within the Toolkit. If you're using a Toolkit earlier than version 11.0.0.7, then you will need to open an App Connect Enterprise Command Console and start an integration server that way. This alternate option is detailed in the <a href='https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bn03995_.html'>Knowledge Center</a>, but we will progress in this tutorial assuming you're using our most up to date Toolkit capabilities."
+                      "details":"Next you will test the message flow using a local integration server, which is created from within the Toolkit. If you're using a Toolkit earlier than version 11.0.0.7, then you will need to open an App Connect Enterprise Command Console and start an integration server that way. This alternate option is detailed in the <a href='https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/bn03995_.html'>IBM Documentation</a>, but we will progress in this tutorial assuming you're using our most up to date Toolkit capabilities."
                     },
                     {
                       "details":"From the Integration Explorer view in the bottom left corner of the Toolkit, right-click the Integration Servers folder and select the option to <span class='uicontrol'>Create a local integration server</span>. Leave all the options with their default values and click Finish. The local Integration Server will be started, using a project in your Toolkit's workspace as the work directory. Click OK to dismiss the Success dialog."
